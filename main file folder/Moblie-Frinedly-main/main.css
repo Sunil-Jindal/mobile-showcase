@@ -1,0 +1,580 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap');
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: capitalize;
+    font-family: Poppins sans-serif;
+}
+:root{
+    --purple:#814096;
+    --pink:#f83292;
+    --gradient: linear-gradient(90deg, var(--pink), var(--purple));
+}
+*::selection{
+    background-color: var(--pink);
+    color: #fff;
+}
+html{
+    overflow-x: hidden;
+    /* font-size: 62.5%;  */
+}
+body{
+    background: #f0f9f9;
+    
+}
+.home{
+    min-height: 100vh;
+    padding: 0 9%;
+    padding-top: 2rem;
+    display: flex;
+    flex: 1 1 100vw;
+}
+header{
+    position: fixed;
+    top: 0; left: 0;
+    border-bottom: 1px solid rgb(0,0,0, 0.1);
+    width: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    padding: 1.5rem 9%;
+}
+header .logo{
+    font-size: clamp(1.5rem, 10vw, 2rem); 
+    color: var(--purple);
+}
+header .logo span{
+    color: var(--pink);
+}
+header .navbar a{
+    font-size: clamp(1rem, 1.5vw, 1.5rem); 
+    margin-left: 2rem;
+    color:var(--pink);
+}
+header input{
+    display: none;
+}
+header label{
+    font-size: clamp(1rem, 10vw, 1.2rem); 
+    color: var(--pink);
+    visibility: hidden;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('image/home-bg-img.png') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.home .image img{
+        width: clamp(400px, 40vw, 800px); 
+        margin-bottom: 10px;
+        animation: float 3s linear infinite;
+}
+@keyframes float{
+    0%, 100%{
+        transform: translateY(0rem);
+    }
+    50%{
+        transform: translateY(2rem);
+    }
+}
+.home .content h3{
+    font-size: clamp(1rem, 3vw, 4rem); 
+    color: #333;
+    text-transform: uppercase;
+}
+.home .content h3 span{
+    color: var(--pink);
+    text-transform: uppercase;
+}
+.home .content p{
+    font-size: clamp(.8rem, 2vw, 1.2rem);
+    line-height: 1.6rem; 
+    color: #666;
+    padding: 1rem 0;
+}
+.content  .btn{
+    display: inline-block;
+    font-size: clamp(.8rem, 2vw, 2rem);
+    background: var(--gradient);
+    padding: .8rem 3rem;
+    border-radius: 5rem;
+    color: #fff;
+    margin-top: 1px;
+    cursor: pointer;
+   box-shadow: 0 0.5 3rem rgb(0,0,0, 0.1);
+   transition: 0.3s all linear;
+}
+.content  .btn:hover{
+    transform: scale(1.1)
+}
+
+.secondary-btn{
+    display: inline-block;
+    font-size: clamp(.8rem, 1.5vw, 1.5rem);
+    background: var(--gradient);
+    padding: .8rem 2rem;
+    border-radius: 5rem;
+    color: #fff;
+    margin-top: 1px;
+    cursor: pointer;
+    box-shadow: 0 0.5 3rem rgb(0,0,0, 0.1);
+    transition: 0.3s all linear;
+}
+.secondary-btn:hover{
+    transform: scale(1.1)
+}
+
+.heading{
+    text-align: center;
+    background: var(--gradient);
+    color:transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    text-transform: uppercase;
+    padding: 2rem ;
+    word-spacing: 10px;
+    font-size: clamp(2rem, 2.7vw, 2.7rem);
+}
+
+.features .box-container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.features .box-container .box{
+    flex: 1 1 20rem;
+    background: #fff;
+    padding: 1rem 2rem;
+    border: 1px solid rgb(0,0,0, 0.1);
+    border-shadow: 1px solid rgb(0,0,0,0.1);
+    margin: 2rem 2rem;
+    border-radius: .7rem;
+    text-align: center;
+}
+.features .box-container .box img{
+    margin-bottom: 1rem;
+    height: 10rem;
+}
+.features .box-container .box h3{
+    font-size: clamp(1.5rem, 2.3vw, 1.7rem);
+    padding: .5rem 0rem;
+    color:#333;
+
+}
+.features .box-container .box p{
+    font-size: clamp(1rem, 2vw, 1rem);
+    padding: .5rem 0rem .7rem 0rem;
+    color: #666;
+}
+
+.about{
+    background-image: url('image/about-bg.png');
+    background-size: cover;
+    background-position: center;
+}
+.about .column{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.about .column .image{
+    flex: 1 1 30rem;
+}
+.about .column .image img{
+    width: 100%;
+}
+.about .column .content{
+    flex: 1 1 30rem;
+}
+.about .column .content h3{
+    font-size: clamp(1.5rem, 2.3vw, 1.7rem);
+    
+    color:#666;
+}
+.about .column .content p{
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    padding: 1rem 0;
+    color: #666;
+}
+.about .column .content .buttons a:last-child{
+    margin-left: 2rem;
+}
+.newsletter{
+    padding: 5rem 1rem;
+    text-align: center;
+    background-image: url("image/subscribe-bg.png");
+}
+.newsletter h3{
+    font-size: clamp(1.5rem, 2.3vw, 1.7rem);
+    text-transform: uppercase;
+    color:#fff;
+}
+.newsletter p{
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    margin: 2rem auto;
+    color: #fff;
+}
+
+.newsletter form{
+    display: flex;
+    max-width: 60rem;
+    border: .2rem solid #fff;
+    padding: .5rem;
+    margin: 2rem auto;
+    border-radius: 5rem;
+    height: 4.5rem;
+}
+.newsletter form input[type="email"]{
+    padding: 0 2rem;
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    background: none;
+    width: 100%;
+    color: #fff;
+    text-transform: none;
+    background: none;
+}
+.newsletter form input[type="email"]::placeholder{
+    color:#eee;
+    text-transform: capitalize;
+}
+.newsletter form input[type="submit"]{
+    cursor: pointer;
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    background: #fff;
+    width: 20rem;
+    color: #666;
+    border-radius: 5rem;
+    
+}
+.newsletter form input[type="submit"]:hover{
+    color:var(--pink);
+}
+.newsletter h3{
+    width: auto;
+}
+
+.reviwe .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.reviwe .box-container .box{
+    background: #fff;
+    margin: 2rem 3rem;
+    padding:1rem;
+    text-align: center;
+    position: relative;
+    border: .1rem solid rgb(0,0,0, 0.2);
+    box-shadow: 0 .5rem 1rem rgb(0,0,0, 0.1);
+    flex: 1 1 20rem;
+    border-radius: 1rem;
+}
+.reviwe .box-container .box .fa-quote-right{
+    position: absolute;
+    top: 1rem; right: 2rem;
+    font-size: clamp(4rem, 7vh, 8rem);
+    color: var(--pink);
+    opacity: .3;
+}
+.reviwe .box-container .box img{
+    object-fit: cover;
+    border-radius: 50%;
+    height: auto;
+    width: 7rem;
+}
+.reviwe .box-container .box h3{
+    color: var(--pink);
+    font-size: clamp(1rem, 2vw, 2rem)
+}
+.reviwe .box-container .box i{
+    color: var(--purple);
+    font-size: clamp(.5rem, 1vw, 1rem);
+    padding: .7rem 0;
+}
+.reviwe .box-container .box .comment{
+    color: #666;
+    font-size: clamp(.7rem, 1.3vw, 1.3rem);
+    padding-bottom: 1rem;
+}
+
+.pricing .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.pricing .box-container .box{
+    background: #fff;
+    margin: 1rem;
+    padding:1rem;
+    padding-bottom:3rem;
+    text-align: center;
+    position: relative;
+    border: .1rem solid rgb(0,0,0, 0.2);
+    box-shadow: 0 .5rem 1rem rgb(0,0,0, 0.1);
+    flex: 1 1 24rem;
+    border-radius: 1rem;
+}
+.pricing .box-container .box:nth-child(2),
+.pricing .box-container .box:hover{
+    border: .2rem solid var(--pink);
+}
+.pricing .box-container .box .title{
+    color: var(--pink);
+    font-size: clamp(1.3rem, 2vw, 2rem);
+    padding: 1rem;
+}
+.pricing .box-container .box .price{
+    color: var(--pink);
+    
+    font-size: clamp(2.3rem, 3vw, 3rem);
+    padding: 1rem;
+}
+.pricing .box-container .box span{
+    
+    font-size: clamp(1.3rem, 2.3vw, 2.3rem);
+    
+}
+.pricing .box-container .box ul{
+    padding: 1rem 0rem;
+    list-style-type: none;
+}
+.pricing .box-container .box ul li{
+    font-size: clamp(1rem, 1.5vw, 1.5rem);
+    color: #666;
+    padding: .5rem 0rem;
+}
+.pricing .box-container .box ul li .fa-check{
+    color:lightgreen;
+}
+.pricing .box-container .box ul li .fa-times{
+    color:tomato;
+}
+
+.contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:3rem;
+}
+
+.contact .image{
+    flex: 1 1 30rem;
+}
+
+.contact .image img{
+    width: 100%;
+    padding: 2rem;
+}
+
+.contact form{
+    background: #fff;
+    flex: 1 1 30rem;
+    margin: 1rem 1rem;
+    padding:2rem 1rem;
+    text-align: center;
+    position: relative;
+    border: .1rem solid rgb(0,0,0, 0.2);
+    box-shadow: 0 .5rem 1rem rgb(0,0,0, 0.1);
+    flex: 1 1 20rem;
+    border-radius: 1rem;
+}
+.contact form .heading{
+    text-align: left;
+    padding: 0;
+    padding-bottom: 1rem;
+}
+.contact form .inputbox{
+    position: relative;
+}
+.contact form .inputbox input, .contact form .inputbox textarea{
+    width:100%;
+    background: none;
+    color: #666;
+    margin: 1.5rem 0;
+    padding: .5rem 0;
+    font-size: clamp(1rem, 1.7vw, 17rem);
+    border-bottom: .1rem solid rgb(0,0,0, 0.1);
+    text-transform: none;
+}
+.contact form .inputbox .textarea{
+    resize: none;
+    height: 6rem;
+}
+.contact form .inputbox label{
+    font-size: clamp(1rem, 1.7vw, 1.7rem);
+    position: absolute;
+    top: 1.7rem;
+    left: 0;
+    color: #666;
+    transition: .2s all linear;
+
+}
+.contact form .inputbox input:focus ~ label,
+.contact form .inputbox input:valid ~ label,
+.contact form .inputbox textarea:focus ~ label,
+.contact form .inputbox textarea:valid ~ label{
+    top: .1rem;
+    font-size: clamp(1rem, 1.7vw, 1.7rem);
+    color: #666;
+}
+.footer{
+    background-image: url('image/footer-bg.png');
+    background-size: cover;
+    background-position: center;
+}
+.footer .box-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.footer .box-container  #box-1{
+    flex: 1 1 20rem;
+    margin: 2rem;
+}
+.footer .box-container  #box-2{
+    flex: 1 1 10rem;
+    margin: 2rem;
+}
+.footer .box-container  #box-3{
+    flex: 1 1 10rem;
+    margin: 2rem;
+}
+.footer .box-container  #box-4{
+    flex: 1 1 20rem;
+    margin: 2rem;
+}
+.footer .box-container .box h3{
+    font-size: clamp(1.5rem, 2.2vw, 2.2rem);
+    padding: 1rem 0;
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 0.6rem;
+}
+.footer .box-container .box p{
+    font-size: clamp(.8rem, 1.4vw, 1.4rem);
+    padding: .5rem 0;
+    color: #eee;
+   text-align: justify;
+}
+.footer .box-container .box a{
+    font-size: clamp(.8rem, 1.4vw, 1.4rem);
+    padding: .5rem 0;
+    color: #eee;
+    display: block;
+}
+.footer .box-container .box a:hover{
+   text-decoration: underline;
+}
+
+.footer .box-container .box .info{
+    display: flex;
+    align-items: center;
+}
+.footer .box-container .box .info i{
+    margin: .5rem 0;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--pink);
+    font-size: clamp(1rem, 2vw, 2rem);
+    height: auto;
+    width: 3rem;
+    line-height: 3rem;
+    text-align: center;
+}
+
+.footer .credit{
+    font-size: clamp(1rem, 2vw, 2rem);
+    font-weight:normal;
+    letter-spacing: .1rem;
+    color: #fff;
+    border-top: .1rem solid #fff5;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+@media (max-width:971px)
+{
+    header label{
+        visibility: visible;
+        opacity: 1;
+    }
+    header .navbar{
+        position:absolute;
+        top:100%; left: 0;
+        width: 100%;
+        background: #fff;
+        padding: .5rem 2rem;
+        border-top: .1rem solid rgb(0,0,0, 0.2);
+        box-shadow:0 0.5rem 1rem  rgb(0,0,0, 0.1);
+        transform-orgin: top;
+        transform: scaleY(0);
+        opacity: 0;
+    }
+    header .navbar a{
+        margin: 1rem 0rem;
+        display: block;
+        text-align: right;
+        font-weight: bold;
+    }
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    header input:checked ~ label::before{
+        content: "\f00d";
+    }
+    .home{
+        flex-flow: column-reverse;
+    }
+    .home .image img{
+        width: 100%;
+    }
+    
+} 
+
+@media (max-width:900px){
+    section{
+      
+        padding: 0 3%;
+        padding-top: 2rem;
+       
+       
+    }
+}
+
+@media (max-width:958px){
+    .about{
+    background-position: right; 
+    }
+}
+@media (max-width:480px){
+    .about .column .content .buttons a{
+        width: 100%;
+    }
+    .about .column .content .buttons a:last-child{
+        
+        margin: 1rem 0rem;
+    }
+}
